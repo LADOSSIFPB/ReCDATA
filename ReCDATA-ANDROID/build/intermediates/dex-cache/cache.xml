@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Programação\Android\workspace\ReCDATA\app\libs\core-2.3.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="80a402b12accd66d4be7e5dbcb44e42baa0bdd7c">
+        <dex dex="C:\Programação\Android\workspace\ReCDATA\app\build\intermediates\pre-dexed\debug\core-2.3.0-743cb423da3b3e11151cf6a2e0c85e4a30f07ed0.jar" />
+    </item>
+
+</items>

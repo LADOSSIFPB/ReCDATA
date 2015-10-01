@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E8E8"
+    tools:context="${packageName}.${activityClass}" >
+
+       <LinearLayout
+           android:id="@+id/lv"
+           android:layout_width="match_parent"
+           android:layout_height="125dp"
+           android:layout_margin="25dp"
+           android:background="#727272"
+           android:orientation="horizontal" >
+ 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
+            android:orientation="horizontal" >
+ 
+            <ImageView
+                android:id="@+id/image_view_icon_item_lista"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:id="@+id/text_view_item_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="50dp"
+                android:textSize="15dp"
+                android:typeface="monospace" />
+        </LinearLayout>
+        
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:background="#E8E8E8"
+        android:layout_marginTop="160dp"
+        android:typeface="monospace" />
+</RelativeLayout>
+
+ 
+<!-- From: file:/C:/Programação/Android/workspace/ReCDATA/app/src/main/res/layout/listactivity_list_view_personalizada.xml -->

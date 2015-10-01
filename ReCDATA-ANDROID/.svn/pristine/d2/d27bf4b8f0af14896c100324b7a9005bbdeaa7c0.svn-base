@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="0dp"
+    android:background="#FFF"
+    >
+    
+    <ImageView  
+     android:layout_marginTop="10dp"
+     android:layout_marginLeft="60dp"
+     android:layout_width="200dp"
+     android:layout_height="50dp"
+     android:src="@drawable/logoprojeto"    
+    />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/style_edittext"
+            android:onClick="callZXing"
+            android:text="Clique e capture o Código"
+            android:textSize="14dp"
+            android:typeface="monospace" />
+
+        <TextView
+            android:id="@+id/txResult"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/style_edittext"
+            android:text="Resultado:"
+            android:textSize="14dp"
+            android:typeface="monospace" />
+
+        <Button
+            android:id="@+id/reservaQr"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/style_edittext"
+            android:text="Reserva Item?"
+            android:textSize="14dp"
+            android:typeface="monospace" />
+        
+        </LinearLayout>
+
+</RelativeLayout>

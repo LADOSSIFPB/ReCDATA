@@ -1,0 +1,221 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+	font-size: 20px;
+}
+
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+.wp{
+	min-height: 100%;
+	margin: 0 auto -100px;
+	height: auto !important;
+    height: 100%; 
+}
+
+.welcome {
+	text-align: justify;
+	padding: 45px 50px 45px 50px;
+}
+
+
+#content {
+	position: relative;
+	top: 20%;
+	margin-top: 6%;
+	width: 930px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.menu {
+	text-align: center;
+}
+
+#header {
+
+	display: block;
+	background: white;
+	box-shadow: 0px 5px 5px #888888;
+}
+
+.menu ul {
+	visibility: hidden;
+	display: inline;
+}
+
+/*.menu.menu-open {
+    visibility: visible;
+    z-index: 2;
+    width: 100%;
+}*/
+.menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	z-index: 1;
+}
+
+.menu>ul {
+	position: relative;
+}
+
+.menu-open>ul {
+	left: 0;
+	top: 0;
+	visibility: visible;
+}
+
+.menu-open>ul:focus {
+	outline: 0;
+}
+
+.menu li {
+	position: relative;
+}
+
+.menu a {
+	display: block;
+	color: inherit;
+	line-height: 1.5em;
+	padding: 5px 20px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.menu.menu-horizontal>.menu-heading {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.menu.menu-horizontal>ul {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	vertical-align: middle;
+	left: 90px;
+}
+
+.menu li a {
+	font-family: Arial;
+	font-size: 20px;
+	padding: 45px 30px 45px 30px;
+	text-decoration: none;
+}
+
+.menu-horizontal li {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	vertical-align: middle;
+}
+
+.menu-horizontal li li {
+	display: block;
+}
+
+.menu li a:hover, .menu li a:focus {
+	color: #8AC6D0;
+}
+
+.logo {
+	background: -webkit-linear-gradient(top, #1F8DD6, #1F8DD6 15%, white 15%, white);
+	position: absolute;
+	background-color: white;
+	margin-left: 5%;
+	width: 220px;
+	height: 190px;
+	box-shadow: 0px 5px 5px #888888;
+}
+
+.logoIF {
+	width: 100px;
+	height: 60px;
+	margin-left: 20%;
+	margin-top: 1%;
+}
+
+.logoLADOSS {
+	width: 200px;
+	height: 50px;
+	margin-left: 2%;
+}
+
+.logoImg {
+	width: 220px;
+	height: 190px;
+}
+
+label {
+	margin-top: 2%;
+	position: relative;
+}
+
+form input {
+	color: #666666;
+	border: 1px solid #CCCCCC;
+	border-left: 6px solid #CCCCCC;
+	padding: 6px;
+	margin: 5px 5 0 0;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	-khtml-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+}
+
+form input, form label, form select {
+	padding: 0 auto;
+	position: relative;
+	margin-top: 3%;
+}
+
+form input, form select {
+	margin-bottom: 5%;
+}
+
+.bt {
+	padding: 0 auto;
+	left: 50%;
+	position: relative;
+}
+
+#footer{
+	background-color: #F5F5F5;
+	position: relative;
+	height: 100px;
+	bottom: 0;
+}
+
+.push{
+	height: 510px;
+
+}
+
+.textFooter {
+	text-align: justify;
+	float: right;
+	position: relative;
+}
+
+
+
+ .ui-inputfield{	
+	color: #666666 !important;
+	border: 1px solid #CCCCCC !important;
+	border-left: 6px solid #CCCCCC !important;
+	padding: 2px !important;
+	margin: 5px 5 0 0 !important;
+	-moz-border-radius: 3px 3px 3px 3px !important;
+	-webkit-border-radius: 3px 3px 3px 3px !important;
+	-khtml-border-radius: 3px 3px 3px 3px !important;
+	border-radius: 3px 3px 3px 3px !important;
+	box-shadow : none !important;
+}

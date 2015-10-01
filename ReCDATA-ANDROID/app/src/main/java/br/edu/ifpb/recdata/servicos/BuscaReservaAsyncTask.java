@@ -1,0 +1,81 @@
+package br.edu.ifpb.recdata.servicos;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
+import br.edu.ifpb.recdata.telas.TelaResultadosReserva;
+import br.edu.ifpb.recdata.util.Constantes;
+
+public class BuscaReservaAsyncTask extends
+		AsyncTask<JSONObject, Void, HttpResponse> {
+
+	private Activity activity;
+	private ProgressDialog progressDialog;
+
+	public BuscaReservaAsyncTask(Activity activity) {
+		this.activity = activity;
+	}
+
+	@Override
+	protected void onPreExecute() {
+		progressDialog= ProgressDialog.show(activity,"Por Favor espere...", "Buscando informações no servidor...", true);
+		progressDialog.setCancelable(false);
+	}
+
+	@Override
+	protected HttpResponse doInBackground(JSONObject... jsonObjects) {
+
+		// Enviar a requisi��o HTTP via GET.
+		HttpResponse response = HttpService.sendJsonPostRequest(
+				"/reserva/listarReservasUsuarioById", jsonObjects[0]);
+		return response;
+	}
+
+	@Override
+	protected void onPostExecute(HttpResponse response) {
+
+		int httpCode = response.getStatusLine().getStatusCode();
+
+		if (httpCode == HttpStatus.SC_OK) {
+
+			// Convers�o do response ( resposta HTTP) para String.
+			String reservasJson = HttpUtil.entityToString(response);
+			Log.i("ReCDATA ", "Resquest - POST: " + reservasJson);
+
+			try {
+				JSONArray reservasJsonArray = new JSONArray(reservasJson);
+
+				if (reservasJsonArray.length() > 0) {
+					Intent intent = new Intent(this.activity,
+							TelaResultadosReserva.class);
+					
+					Bundle bundle = new Bundle();
+					bundle.putString("reservas", reservasJson);
+					intent.putExtras(bundle);
+					
+					this.activity.startActivity(intent);
+
+				} else {
+					Toast.makeText(activity.getApplicationContext(),
+							Constantes.RESERVA_NAO_ENCONTRADA,
+							Toast.LENGTH_SHORT).show();
+				}
+			} catch (JSONException e) {
+				//TODO: Tratar erro.
+				e.printStackTrace();
+			}
+
+			}
+		progressDialog.dismiss();
+	}
+}

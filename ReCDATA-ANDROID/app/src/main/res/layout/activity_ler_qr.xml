@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="0dp"
+    android:background="#E8E8E8"
+    >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+         android:layout_marginTop="20dp"
+         android:layout_width="300dp"
+         android:layout_height="100dp"
+            android:src="@drawable/logoprojeto"
+            android:layout_gravity="center" />
+
+       <ImageButton
+           android:layout_width="150dp"
+           android:layout_height="100dp"
+           android:layout_marginTop="50dp"
+           android:layout_gravity="center"
+           android:layout_marginLeft= "@dimen/half_padding"
+           android:background="@drawable/icon_camera"
+           android:onClick="callZXing"
+           android:id="@+id/captureQr"/>
+
+        <TextView
+            android:id="@+id/txResult"
+            android:layout_width="302dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="50dp"
+            android:text="Resultado:"
+            android:textSize="18dp"
+            android:background="#474350"
+            android:typeface="monospace"
+            android:layout_gravity="center_horizontal"
+            android:autoText="false"
+            android:textColor="#FFF" />
+
+        <Button
+            android:id="@+id/reservaQr"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="#00796B"
+            android:text="Reserva Item?"
+            android:textSize="14dp"
+            android:typeface="monospace"
+            android:drawableRight="@drawable/icon_arrowright"
+
+            />
+        
+        </LinearLayout>
+
+</RelativeLayout>

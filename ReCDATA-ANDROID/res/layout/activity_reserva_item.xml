@@ -1,0 +1,207 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dip"
+                    android:background="#FF909090" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="PARA A RESERVA INFORME"
+                    android:textColor="#000"
+                    android:textSize="16dp"
+                    android:typeface="monospace" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dip"
+                    android:background="#FF909090" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/linearLayout3"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="151dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Data Inicio:"
+                    android:textColor="#000"
+                    android:textSize="16dp"
+                    android:typeface="monospace" />
+
+               <EditText
+                android:id="@+id/dataInicio"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight=".5"
+                android:background="@drawable/style_edittext"
+                android:inputType="date" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Hora Inicio:"
+                    android:textColor="#000"
+                    android:textSize="16dp"
+                    android:typeface="monospace" />
+
+                <EditText
+                android:id="@+id/horaInicio"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight=".5"
+                android:background="@drawable/style_edittext"
+                android:inputType="time" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/linearLayout4"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Data Final:"
+                    android:textColor="#000"
+                    android:textSize="16dp"
+                    android:typeface="monospace" />
+
+               <EditText
+                android:id="@+id/dataFim"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight=".5"
+                 android:background="@drawable/style_edittext"
+                android:inputType="date" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Hora Termino:"
+                    android:textColor="#000"
+                    android:textSize="16dp"
+                    android:typeface="monospace" />
+
+               <EditText
+                android:id="@+id/horaFim"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight=".5"
+                 android:background="@drawable/style_edittext"
+                android:inputType="date" />
+
+               <TextView
+                   android:id="@+id/textView7"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="30dp"
+                   android:layout_weight="0.13"
+                   android:text="Alguma Observação?"
+                   android:textColor="#000"
+                   android:textSize="16dp"
+                   android:typeface="monospace" />
+
+               <EditText
+                   android:id="@+id/observacao"
+                   android:layout_width="254dp"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="30dp"
+                   android:layout_marginTop="15dp"
+                   android:background="@drawable/style_edittext"
+                   android:ems="10"
+                   android:inputType="textPersonName" >
+
+               </EditText>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dip"
+                    android:background="#FF909090" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/linearLayout5" >
+
+                <Button
+                    android:id="@+id/buttonReserva"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="20dp"
+                     android:background="@drawable/style_edittext"
+                    android:text="Confirmar" />
+
+                <Button
+                    android:id="@+id/buttonVoltarLista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="20dp"
+                     android:background="@drawable/style_edittext"
+                    android:text="Voltar" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

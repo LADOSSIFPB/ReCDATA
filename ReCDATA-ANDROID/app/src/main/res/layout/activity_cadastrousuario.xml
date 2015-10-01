@@ -1,0 +1,211 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E8E8" >
+
+
+
+    <EditText
+            android:id="@+id/nome_completo"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/imageView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-8dp"
+            android:background="#474350"
+            android:ems="13"
+            android:hint="Nome Completo"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/cpf"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/nome_completo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:background="#474350"
+            android:digits="1234567890"
+            android:ems="13"
+            android:hint="CPF (000.000.000-00)"
+            android:inputType="numberDecimal"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/cpf"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:background="#474350"
+            android:ems="13"
+            android:hint="Login"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/login"
+            android:layout_alignStart="@+id/login"
+            android:layout_below="@+id/login"
+            android:text="Você é?"
+            android:layout_marginTop="6dp"
+            android:textColor="#000"
+            android:textSize="14dp"
+            android:typeface="monospace" />
+
+        <Spinner
+            android:id="@+id/tipousuario"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignEnd="@+id/login"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignRight="@+id/login"
+            android:layout_alignStart="@+id/textView4"
+            android:layout_below="@+id/textView4"
+            android:background="#474350"
+            android:gravity="center" />
+
+        <EditText
+            android:id="@+id/endereco"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignLeft="@+id/tipousuario"
+            android:layout_alignStart="@+id/tipousuario"
+            android:layout_below="@+id/tipousuario"
+            android:layout_marginTop="38dp"
+            android:background="#474350"
+            android:ems="13"
+            android:hint="Endereço Completo" />
+
+        <EditText
+            android:id="@+id/dataNascimento"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignEnd="@+id/endereco"
+            android:layout_alignLeft="@+id/endereco"
+            android:layout_alignRight="@+id/endereco"
+            android:layout_alignStart="@+id/endereco"
+            android:layout_marginTop="215dp"
+            android:background="#474350"
+            android:hint="Data de Nascimento"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/telefone"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignEnd="@+id/dataNascimento"
+            android:layout_alignLeft="@+id/dataNascimento"
+            android:layout_alignRight="@+id/dataNascimento"
+            android:layout_alignStart="@+id/dataNascimento"
+            android:layout_below="@+id/dataNascimento"
+            android:layout_marginTop="36dp"
+            android:background="#474350"
+            android:digits="1234567890"
+            android:ems="11"
+            android:hint="(XX)XXXXX-XXXX"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignEnd="@+id/dataNascimento"
+            android:layout_alignLeft="@+id/telefone"
+            android:layout_alignRight="@+id/dataNascimento"
+            android:layout_alignStart="@+id/telefone"
+            android:layout_below="@+id/telefone"
+            android:layout_marginTop="5dp"
+            android:background="#474350"
+            android:ems="13"
+            android:hint="exemplo@email.com"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/senha"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="#474350"
+            android:ems="13"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:layout_below="@+id/sexo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp" />
+
+        <Button
+            android:id="@+id/criar_conta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00796B"
+            android:minHeight="30dp"
+            android:minWidth="100dp"
+            android:text="Criar Conta"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="425dp"
+            android:layout_alignLeft="@+id/confirma_senha"
+            android:layout_alignStart="@+id/confirma_senha"
+            android:layout_alignRight="@+id/confirma_senha"
+            android:layout_alignEnd="@+id/confirma_senha" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logoprojeto" />
+
+        <requestFocus />
+
+        <RadioGroup
+            android:id="@+id/sexo"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/email"
+            android:layout_alignLeft="@+id/imageView1"
+            android:layout_alignStart="@+id/imageView1">
+
+            <RadioButton
+                android:id="@+id/sexoMasculino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/sexo"
+                android:layout_alignLeft="@+id/email"
+                android:layout_alignStart="@+id/email"
+                android:text="Masculino"
+                android:textColor="#000"
+                android:textSize="13dp"
+                android:checked="true"
+                android:typeface="monospace" />
+
+            <RadioButton
+                android:id="@+id/sexoFeminino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/senha"
+                android:layout_alignRight="@+id/senha"
+                android:layout_alignTop="@+id/sexoMasculino"
+                android:text="Feminino"
+                android:textColor="#000"
+                android:textSize="13dp"
+                android:typeface="monospace" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/confirma_senha"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="396dp"
+            android:background="#474350"
+            android:ems="13"
+            android:hint="Confirme a senha"
+            android:inputType="textPassword" />
+</RelativeLayout>
